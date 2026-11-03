@@ -1,11 +1,164 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventHub</title>
-</head>
-<body>
+
+    <meta name="description" content="Descubra eventos, experiências e encontros com o EventHub.">
+
+    <title>EventHub | Descubra novos eventos</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- LUCIDE ICONS -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
     
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    
+
+<body>
+
+    <!-- ============ HEADER ============ -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+                Event<span>Hub</span>.
+            </a>
+
+            <!-- NAVEGAÇÃO -->
+            <nav class="main-nav">
+
+                <ul>
+                    <li><a href="#">Explorar</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Para organizadores</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- AÇÕES DO USUÁRIO -->
+            <div class="header-actions">
+
+                <a href="#" class="login-link">
+                    Entrar
+                </a>
+
+                <a href="#" class="register-button">
+                    Criar conta
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ============ MAIN CONTENT============ -->
+
+    <main>
+
+        <!-- ============ HERO SEARCH ============ -->
+
+        <section class="hero">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <!-- IDENTIFICAÇÃO -->
+                    <span class="hero-label">
+                        DESCUBRA ALGO NOVO
+                    </span>
+
+
+                    <!-- TÍTULO -->
+                    <h1>
+                        Seu próximo momento
+                        <span>começa aqui.</span>
+                    </h1>
+
+
+                    <!-- DESCRIÇÃO -->
+                    <p>
+                        Explore eventos, conheça novas experiências
+                        e encontre algo especial para fazer.
+                    </p>
+
+
+                    <!-- FORMULÁRIO DE PESQUISA -->
+                    <form class="search-form">
+
+                        <!-- CAMPO DE PESQUISA -->
+                        <div class="search-field">
+
+                            <label for="event-search">
+                                <i data-lucide="search"></i>
+                                O que você procura?
+                            </label>
+
+                            <input
+                                type="text"
+                                id="event-search"
+                                name="event-search"
+                                placeholder="Shows, festivais, cursos..."
+                            >
+
+                        </div>
+
+
+                        <!-- CAMPO DE LOCALIZAÇÃO -->
+                        <div class="search-field">
+
+                            <label for="event-location">
+                                <i data-lucide="map-pin"></i>
+                                Onde?
+                            </label>
+
+                            <input
+                                type="text"
+                                id="event-location"
+                                name="event-location"
+                                placeholder="Cidade ou região"
+                            >
+
+                        </div>
+
+
+                        <!-- BOTÃO -->
+                        <button type="submit">
+                            Buscar eventos
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
 </body>
+
 </html>
