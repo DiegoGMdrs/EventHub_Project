@@ -610,3 +610,211 @@ input {
     }
 
 }
+
+
+/* ==========================
+   EVENT CARD
+========================== */
+
+.event-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================
+   EVENT IMAGE
+========================== */
+
+.event-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.event-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==========================
+   EVENT INFORMATION
+========================== */
+
+.event-info {
+    padding: 12px;
+}
+
+
+/* CATEGORY */
+
+.event-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.event-category span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--primary-color);
+}
+
+
+/* FAVORITE BUTTON */
+
+.favorite-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary-text);
+}
+
+
+/* EVENT TITLE */
+
+.event-info h3 {
+    font-family: var(--heading-font);
+    font-size: 15px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+
+/* EVENT DETAILS */
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.event-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+.event-details i {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* EVENT FOOTER */
+
+.event-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* EVENT PRICE */
+
+.event-price {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.event-price span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+.event-price strong {
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+/* ==========================
+   POPULAR EVENTS
+========================== */
+
+.popular-events {
+    width: 100%;
+    padding: 60px 0 80px;
+}
+
+/* SECTION HEADER */
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.section-header h2 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+
+.section-header a {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* EVENTS GRID */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* RESPONSIVE GRID */
+
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .section-header h2 {
+        font-size: 23px;
+    }
+}
