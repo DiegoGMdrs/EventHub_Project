@@ -1,10 +1,9 @@
 
 /* =========================================
-   1. VARIÁVEIS
+   1. VARIÁVEIS [VAR()]
 ========================================= */
 
-:root {
-
+:root { /*PADRONIZAR AS CORES DA PAGINA*/
     /* CORES */
     --color-background: #F4EFE8;
     --color-text: #29231F;
@@ -12,6 +11,8 @@
 
     --color-primary: #D65B3D;
     --color-primary-hover: #BD4D33;
+    --color-alternative:#768b43;
+    --color-alternative-hover:#477e3c;
 
     --color-border: #DED5C9;
     --color-white: #FFFFFF;
@@ -26,146 +27,80 @@
     --container-width: 1200px;
 }
 
-
 /* =========================================
    2. RESET
 ========================================= */
-
-* {
+* { /*TODOS OS ELEMENTOS*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 body {
     background-color: var(--color-background);
     color: var(--color-text);
-
     font-family: var(--font-body);
 }
-
-
 a {
     text-decoration: none;
     color: inherit;
 }
-
-
-button,
-input {
-    font: inherit;
-}
-
+button,input {font: inherit;}
 
 /* =========================================
    3. HEADER
 ========================================= */
 
 .main-header {
-
     width: 100%;
-
     background-color: var(--color-background);
-
     border-bottom: 1px solid var(--color-border);
 }
 
-
 .header-container {
-
     width: min(var(--container-width), 90%);
-
     min-height: 82px;
-
     margin: 0 auto;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 30px;
 }
 
-
 /* LOGO */
-
 .logo {
-
     font-family: var(--font-heading);
-
     font-size: 1.8rem;
-
     font-weight: 800;
-
     letter-spacing: -1.5px;
 }
-
-
-.logo span {
-
-    color: var(--color-primary);
-
-}
-
+.logo span {color: var(--color-primary);}
 
 /* NAVEGAÇÃO */
-
 .main-nav ul {
-
     display: flex;
-
     align-items: center;
-
     gap: 32px;
-
     list-style: none;
 }
 
-
 .main-nav a {
-
     font-size: 0.95rem;
-
     font-weight: 500;
-
     transition: color 0.2s ease;
 }
-
-
-.main-nav a:hover {
-
-    color: var(--color-primary);
-
-}
-
+.main-nav a:hover {color: var(--color-alternative-hover);} /*Faz mudar de cor o texto quando o mouse passa*/
 
 /* AÇÕES DO HEADER */
-
 .header-actions {
-
     display: flex;
-
     align-items: center;
-
     gap: 22px;
 }
-
-
 .login-link {
-
     font-weight: 600;
-
     transition: color 0.2s ease;
 }
-
-
-.login-link:hover {
-
-    color: var(--color-primary);
-
-}
+.login-link:hover {color: var(--color-alternative-hover);}
 
 
 .register-button {
@@ -769,6 +704,20 @@ input {
     width: 100%;
     padding: 60px 16px 80px;
     box-sizing: border-box;
+
+}
+
+/* EVENTS GRID */
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/*Fazer o mouse mudar quando ficar emcima */
+.event-card:hover {
+    cursor: pointer;
 }
 
 /* SECTION HEADER */
@@ -799,15 +748,11 @@ input {
     text-decoration: none;
 }
 
-/* EVENTS GRID */
 
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-}
 
-/* RESPONSIVE GRID */
+/* ==========================
+    RESPONSIVE GRID 
+==========================*/
 
 @media (max-width: 1024px) {
     .events-grid {
