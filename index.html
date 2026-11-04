@@ -29,9 +29,7 @@
 </head>
 
 <body>
-
     <!-- ============ HEADER ============ -->
-
     <header class="main-header">
 
         <div class="header-container">
@@ -52,7 +50,7 @@
 
             </nav>
 
-            <!-- AÇÕES DO USUÁRIO -->
+            <!-- FAZER LOGIN E REGISTRO -->
             <div class="header-actions">
                 <a href="#" class="login-link"> Entrar </a>
                 <a href="#" class="register-button"> Criar conta </a>
@@ -69,20 +67,9 @@
             <div class="hero-container">
 
                 <div class="hero-content">
-
-                    <!-- IDENTIFICAÇÃO -->
-                    <span class="hero-label">
-                        DESCUBRA ALGO NOVO
-                    </span>
-
-
                     <!-- TÍTULO -->
-                    <h1>
-                        Seu próximo momento
-                        <span>começa aqui.</span>
-                    </h1>
-
-
+                    <span class="hero-label">DESCUBRA ALGO NOVO</span>
+                    <h1>Seu próximo momento<span>começa aqui.</span></h1>
                     <!-- DESCRIÇÃO -->
                     <p>
                         Explore eventos, conheça novas experiências
@@ -91,237 +78,202 @@
 
                     <!-- FORMULÁRIO DE PESQUISA -->
                     <form class="search-form">
-
-                        <!-- CAMPO DE PESQUISA -->
-                        <div class="search-field">
-
-                            <label for="event-search">
-                                <i data-lucide="search"></i>
-                                O que você procura?
-                            </label>
-
-                            <input
-                                type="text"
-                                id="event-search"
-                                name="event-search"
-                                placeholder="Shows, festivais, cursos..."
-                            >
-
+                        <div class="search-field"> <!-- CAMPO DE PESQUISA -->
+                            <label for="event-search"><i data-lucide="search"></i>O que você procura?</label>
+                            <input type="text"id="event-search" name="event-search" placeholder="Shows, festivais, cursos...">
                         </div>
-
 
                         <!-- CAMPO DE LOCALIZAÇÃO -->
                         <div class="search-field">
-
-                            <label for="event-location">
-                                <i data-lucide="map-pin"></i>
-                                Onde?
-                            </label>
-
-                            <input
-                                type="text"
-                                id="event-location"
-                                name="event-location"
-                                placeholder="Cidade ou região"
-                            >
-
+                            <label for="event-location"><i data-lucide="map-pin"></i>Onde?</label>
+                            <input type="text" id="event-location" name="event-location" placeholder="Cidade ou região">
                         </div>
 
-
-                        <!-- BOTÃO -->
-                        <button type="submit">
-                            Buscar eventos
-                            <i data-lucide="arrow-right"></i>
-                        </button>
+                        <!-- BOTÃO DE BUSCAR -->
+                        <button type="submit"> Buscar eventos <i data-lucide="arrow-right"></i></button>
 
                     </form>
 
-                </div>
+                </div> <!--Fim do hero-content-->
 
-            </div>
+            </div> <!--Fim do hero-container-->
 
-        </section>
+        </section> <!--Fim da section HERO-->
+
+        <!-- ========== CARROSEL DE IMAGENS ==========-->
         <section class="hero-carousel">
+            <div class="carousel-container"> 
+                <div class="swiper">
+                    <div class="swiper-wrapper">
 
-    <div class="carousel-container"> <!-- ========== CARROSEL ==========-->
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Ultramaratona">
+                        </div>
 
-        <div class="swiper">
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.sympla.com.br/6abe653aa65de-lg.jpg" alt="Evento Musical">
+                        </div>
 
-            <div class="swiper-wrapper">
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="https://images.sympla.com.br/6ae9d85b98312-lg.png" alt="Show RuPaul">
+                        </div>
 
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Show musical">
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3n3hfn6fo6417ehn79e0d4oqms13uhc9b3csdu22q3tqg430l1a7e748tol5201dcj0tgrdkgdqe891m61h7ei9sflurnruqrcuoh30.jpeg" alt="Evento musical">
+                        </div>
+
+                    </div>
+                    <!-- Indicadores -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Setas de navegação -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <img src="https://images.sympla.com.br/6abe653aa65de-lg.jpg" alt="Festival gastronômico">
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <img src="https://images.sympla.com.br/6ae9d85b98312-lg.png" alt="Evento de tecnologia">
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3n3hfn6fo6417ehn79e0d4oqms13uhc9b3csdu22q3tqg430l1a7e748tol5201dcj0tgrdkgdqe891m61h7ei9sflurnruqrcuoh30.jpeg" alt="Evento cultural">
-                </div>
-
             </div>
 
-            <!-- Indicadores -->
-            <div class="swiper-pagination"></div>
-
-            <!-- Setas de navegação -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-        </div>
-    </div>
+    <!-- ========== PAGINA EVENTOS POPULARES ==========-->
     <section class="popular-events">
         <div class="container">
-
             <div class="section-header">
                 <div>
                     <h2>Popular Events</h2>
                     <p>Discover events everyone is talking about.</p>
                 </div>
-
                 <a href="#">View all events</a>
             </div>
 
             <div class="events-grid">
+                <!-- EVENTO 1 -->
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Festival de música">
+                    </div>
 
-    <!-- EVENTO 1 -->
-    <article class="event-card">
-        <div class="event-image">
-            <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Festival de música">
+                    <div class="event-info">
+                        <div class="event-category">
+                            <span>Sport</span>
+                            <button class="favorite-button" aria-label="Adicionar aos favoritos">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+
+                        <h3>Ultramaratona BM 2027</h3>
+
+                        <div class="event-details">
+                            <p><i data-lucide="calendar-days"></i> 16 out, 2027 · Sáb · 05:30</p>
+                            <p><i data-lucide="map-pin"></i> Bertioga, SP</p>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span>Starting at</span>
+                                <strong>R$ 279,90</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EVENTO 2 -->
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.sympla.com.br/6abe653aa65de-lg.jpg" alt="Conferência de tecnologia">
+                    </div>
+
+                    <div class="event-info">
+                        <div class="event-category">
+                            <span>Music</span>
+                            <button class="favorite-button" aria-label="Adicionar aos favoritos">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+
+                        <h3>CARVALHEIRA NA LADEIRA 2027</h3>
+
+                        <div class="event-details">
+                            <p><i data-lucide="calendar-days"></i> 06 fev, 2027 · 01:00</p>
+                            <p><i data-lucide="map-pin"></i>  Memorial Arcoverde, Olinda - PE </p>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span>Starting at</span>
+                                <strong>R$ 1300,00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EVENTO 3 -->
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.sympla.com.br/6ae9d85b98312-lg.png" alt="Conferência de tecnologia">
+                    </div>
+
+                    <div class="event-info">
+                        <div class="event-category">
+                            <span>Music</span>
+                            <button class="favorite-button" aria-label="Adicionar aos favoritos">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+
+                        <h3>RUPAUL Ao Vivo no Brasil </h3>
+
+                        <div class="event-details">
+                            <p><i data-lucide="calendar-days"></i> 22 Jan, 2027 até 23 jan 2027 · 05:00</p>
+                            <p><i data-lucide="map-pin"></i>  Vibra São Paulo, São Paulo - SP </p>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span>Starting at</span>
+                                <strong>R$ 350,00</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EVENTO 4 -->
+                <article class="event-card">
+                    <div class="event-image">
+                        <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3n3hfn6fo6417ehn79e0d4oqms13uhc9b3csdu22q3tqg430l1a7e748tol5201dcj0tgrdkgdqe891m61h7ei9sflurnruqrcuoh30.jpeg" alt="Conferência de tecnologia">
+                    </div>
+
+                    <div class="event-info">
+                        <div class="event-category">
+                            <span>Music</span>
+                            <button class="favorite-button" aria-label="Adicionar aos favoritos">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+
+                        <h3>GABY AMARANTOS Rock Doido Tour</h3>
+
+                        <div class="event-details">
+                            <p><i data-lucide="calendar-days"></i> 11 Dez, 2026 · 20:00</p>
+                            <p><i data-lucide="map-pin"></i> Rua José do Patrocínio, 834, Porto Alegre - RS </p>
+                        </div>
+
+                        <div class="event-footer">
+                            <div class="event-price">
+                                <span>Starting at</span>
+                                <strong>R$ 100,00</strong>
+                            </div>
+                            <span class="event-badge">
+                                Meia-entrada
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+            </div> <!-- FIM DE GRID DE EVENTO -->
         </div>
-
-        <div class="event-info">
-            <div class="event-category">
-                <span>Sport</span>
-                <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                    <i data-lucide="heart"></i>
-                </button>
-            </div>
-
-            <h3>Ultramaratona BM 2027</h3>
-
-            <div class="event-details">
-                <p><i data-lucide="calendar-days"></i> 16 out, 2027 · Sáb · 05:30</p>
-                <p><i data-lucide="map-pin"></i> Bertioga, SP</p>
-            </div>
-
-            <div class="event-footer">
-                <div class="event-price">
-                    <span>Starting at</span>
-                    <strong>R$ 279,90</strong>
-                </div>
-            </div>
-        </div>
-    </article>
-
-
-    <!-- EVENTO 2 -->
-    <article class="event-card">
-        <div class="event-image">
-            <img src="https://images.sympla.com.br/6abe653aa65de-lg.jpg" alt="Conferência de tecnologia">
-        </div>
-
-        <div class="event-info">
-            <div class="event-category">
-                <span>Music</span>
-                <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                    <i data-lucide="heart"></i>
-                </button>
-            </div>
-
-            <h3>CARVALHEIRA NA LADEIRA 2027</h3>
-
-            <div class="event-details">
-                <p><i data-lucide="calendar-days"></i> 06 fev, 2027 · 01:00</p>
-                <p><i data-lucide="map-pin"></i>  Memorial Arcoverde, Olinda - PE </p>
-            </div>
-
-            <div class="event-footer">
-                <div class="event-price">
-                    <span>Starting at</span>
-                    <strong>R$ 1300,00</strong>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- EVENTO 3 -->
-    <article class="event-card">
-        <div class="event-image">
-            <img src="https://images.sympla.com.br/6ae9d85b98312-lg.png" alt="Conferência de tecnologia">
-        </div>
-
-        <div class="event-info">
-            <div class="event-category">
-                <span>Music</span>
-                <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                    <i data-lucide="heart"></i>
-                </button>
-            </div>
-
-            <h3>RUPAUL Ao Vivo no Brasil </h3>
-
-            <div class="event-details">
-                <p><i data-lucide="calendar-days"></i> 22 Jan, 2027 até 23 jan 2027 · 05:00</p>
-                <p><i data-lucide="map-pin"></i>  Vibra São Paulo, São Paulo - SP </p>
-            </div>
-
-            <div class="event-footer">
-                <div class="event-price">
-                    <span>Starting at</span>
-                    <strong>R$ 350,00</strong>
-                </div>
-            </div>
-        </div>
-    </article>
-
-    <!-- EVENTO 4 -->
-    <article class="event-card">
-        <div class="event-image">
-            <img src="https://assets.bileto.sympla.com.br/eventmanager/production/3n3hfn6fo6417ehn79e0d4oqms13uhc9b3csdu22q3tqg430l1a7e748tol5201dcj0tgrdkgdqe891m61h7ei9sflurnruqrcuoh30.jpeg" alt="Conferência de tecnologia">
-        </div>
-
-        <div class="event-info">
-            <div class="event-category">
-                <span>Music</span>
-                <button class="favorite-button" aria-label="Adicionar aos favoritos">
-                    <i data-lucide="heart"></i>
-                </button>
-            </div>
-
-            <h3>GABY AMARANTOS Rock Doido Tour</h3>
-
-            <div class="event-details">
-                <p><i data-lucide="calendar-days"></i> 11 Dez, 2026 · 20:00</p>
-                <p><i data-lucide="map-pin"></i> Rua José do Patrocínio, 834, Porto Alegre - RS </p>
-            </div>
-
-            <div class="event-footer">
-                <div class="event-price">
-                    <span>Starting at</span>
-                    <strong>R$ 100,00</strong>
-                </div>
-                 <span class="event-badge">
-                    Meia-entrada
-                </span>
-            </div>
-        </div>
-    </article>
-
-</div>
-
-        </div>
-    
+    </section> <!-- FIM DA SECTION POPULAR EVENTS -->
 
     </main>
 
