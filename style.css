@@ -6,7 +6,7 @@
 :root { /*PADRONIZAR A PAGINA*/
     /* CORES */
     --color-background: #F4EFE8;
-    --color-text: #29231F;
+    --color-text: #382f29;
     --color-secondary: #655A50;
 
     --color-primary: #D65B3D;
@@ -225,8 +225,132 @@ button,input {font: inherit;}
     height: 18px;
 }
 
+
 /* =========================================
-   6. CARROSSEL DE EVENTOS
+   6. SEÇÃO DE CATEGORIAS
+========================================= */
+
+.event-categories {
+    width: 100%;
+    padding: 10px 16px 60px;
+}
+
+/* CARROSSEL */
+
+.categories-carousel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.categories-viewport {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.categories-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/* GRID DE CATEGORIAS */
+
+.categories-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.category-card {
+    display: flex;
+    flex: 0 0 calc((100% - 75px) / 6);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 120px;
+    padding: 16px;
+
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+
+    color: var(--text-color);
+    text-decoration: none;
+    text-align: center;
+
+    scroll-snap-align: start;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(231, 181, 209, 0.5);
+}
+
+.category-card i {
+    width: 26px;
+    height: 26px;
+    color: var(--primary-color);
+}
+
+.category-card span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* SETAS */
+
+.categories-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    color: var(--text-color);
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.categories-arrow:hover {
+    background-color: var(--border-color);
+}
+
+.categories-arrow i {
+    width: 18px;
+    height: 18px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1024px) {
+    .category-card {
+        flex-basis: calc((100% - 30px) / 3);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        flex-basis: calc((100% - 15px) / 2);
+    }
+}
+
+/* =========================================
+   7. CARROSSEL DE EVENTOS
 ========================================= */
 .hero-carousel {
     width: 100%;
@@ -422,11 +546,15 @@ button,input {font: inherit;}
    10. RESPONSIVIDADE
 ========================================= */
 
-/*========== DEFAULT [PC] ==========*/
+/*========== TELA MEDIA PC ==========*/
 @media (max-width: 1024px) {
     .events-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
+    }
+    .categories-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        padding:0px 30px;
     }
 }
 
@@ -442,6 +570,11 @@ button,input {font: inherit;}
     /* PESQUISA */
     .search-form {grid-template-columns: 1fr 1fr;}
     .search-form button {grid-column: 1 / -1;}
+
+    /* GRID DE CATEGORIAS */
+    .categories-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
 
     /* GRID DE EVENTOS */
     .events-grid {
@@ -485,6 +618,12 @@ button,input {font: inherit;}
     /* PESQUISA */
     .search-form {grid-template-columns: 1fr;}
     .search-form button {grid-column: auto;}
+
+    /* GRID DE CATEGORIAS */
+    .categories-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding:0px 15px;
+    }
 
     /* POPULAR EVENTS GRID */
     .events-grid {
