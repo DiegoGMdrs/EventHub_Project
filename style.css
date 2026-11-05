@@ -3,7 +3,7 @@
    1. VARIÁVEIS [VAR()]
 ========================================= */
 
-:root { /*PADRONIZAR AS CORES DA PAGINA*/
+:root { /*PADRONIZAR A PAGINA*/
     /* CORES */
     --color-background: #F4EFE8;
     --color-text: #29231F;
@@ -13,6 +13,8 @@
     --color-primary-hover: #BD4D33;
     --color-alternative:#768b43;
     --color-alternative-hover:#477e3c;
+    --color-blue:#90b8dd;
+    --color-blue-hover:#2359aa;
 
     --color-border: #DED5C9;
     --color-white: #FFFFFF;
@@ -102,124 +104,134 @@ button,input {font: inherit;}
 }
 .login-link:hover {color: var(--color-alternative-hover);}
 
-
 .register-button {
-
     background-color: var(--color-primary);
-
     color: var(--color-white);
-
     padding: 12px 20px;
-
     border-radius: 8px;
-
     font-weight: 600;
-
     transition: background-color 0.2s ease;
 }
-
-
-.register-button:hover {
-
-    background-color: var(--color-primary-hover);
-
-}
-
+.register-button:hover {background-color: var(--color-primary-hover);}
 
 /* =========================================
    4. HERO
 ========================================= */
-
 .hero {
-
     width: 100%;
-
     padding: 90px 0 100px;
 }
-
-
 .hero-container {
-
     width: min(var(--container-width), 90%);
-
     margin: 0 auto;
 }
+.hero-content {max-width: 850px;}
 
-
-.hero-content {
-
-    max-width: 850px;
-
-}
-
-
-/* IDENTIFICAÇÃO DO HERO */
-
+/*========== IDENTIFICAÇÃO DO HERO ==========*/
 .hero-label {
-
     display: inline-block;
-
     color: var(--color-primary);
-
     font-size: 0.8rem;
-
     font-weight: 700;
-
     letter-spacing: 2px;
-
     margin-bottom: 20px;
 }
-
-
-/* TÍTULO */
-
+/*========== TÍTULO ==========*/
 .hero h1 {
-
     font-family: var(--font-heading);
-
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-
     font-weight: 800;
-
     line-height: 1.1;
-
     letter-spacing: -2.5px;
-
     margin-bottom: 20px;
 }
-
-
 .hero h1 span {
-
     display: block;
-
     color: var(--color-primary);
-
 }
-
-
-/* DESCRIÇÃO */
-
+/*========== DESCRIÇÃO ==========*/
 .hero p {
-
     max-width: 580px;
-
     color: var(--color-secondary);
-
     font-size: 1.1rem;
-
     line-height: 1.7;
-
     margin-bottom: 35px;
 }
 
-/* CARROSSEL DE EVENTOS */
+/* =========================================
+   5. FORMULÁRIO DE PESQUISA "BUSCAR EVENTOS"
+========================================= */
 
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+    background-color: var(--color-white);
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+/*========== CAMPOS ==========*/
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 10px;
+}
+/*========== LABEL ==========*/
+.search-field label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+/*========== ÍCONES ==========*/
+.search-field label svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-primary);
+}
+/*========== INPUT ==========*/
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+.search-field input::placeholder {color: #A69B91;}
+
+/*==========BOTÃO DE PESQUISA ==========*/
+.search-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 16px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.search-form button:hover {background-color: var(--color-primary-hover);}
+.search-form button svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   6. CARROSSEL DE EVENTOS
+========================================= */
 .hero-carousel {
     width: 100%;
     padding: 0 0 80px;
 }
-
 .carousel-container {
     width: min(var(--container-width), 90%);
     margin: 0 auto;
@@ -231,17 +243,12 @@ button,input {font: inherit;}
     overflow: hidden;
     border-radius: 16px;
 }
-
-.swiper-wrapper {
-    display: flex;
-}
-
+.swiper-wrapper {display: flex;}
 .swiper-slide {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
 }
-
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -249,308 +256,42 @@ button,input {font: inherit;}
     object-fit: contain;
 }
 
+
+
 /* =========================================
-   5. FORMULÁRIO DE PESQUISA
+    7. POPULAR EVENT CARDS GRID
 ========================================= */
-
-.search-form {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr auto;
-
-    align-items: end;
-
-    gap: 15px;
-
-    background-color: var(--color-white);
-
-    padding: 15px;
-
-    border: 1px solid var(--color-border);
-
-    border-radius: 12px;
-}
-
-
-/* CAMPOS */
-
-.search-field {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-    padding: 5px 10px;
-}
-
-
-/* LABEL */
-
-.search-field label {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    font-size: 0.8rem;
-
-    font-weight: 700;
-}
-
-
-/* ÍCONES */
-
-.search-field label svg {
-
-    width: 16px;
-
-    height: 16px;
-
-    color: var(--color-primary);
-}
-
-
-/* INPUT */
-
-.search-field input {
-
+.popular-events {
     width: 100%;
-
-    border: none;
-
-    outline: none;
-
-    background: transparent;
-
-    font-size: 0.95rem;
-
-    color: var(--color-text);
+    padding: 60px 16px 80px;
+    box-sizing: border-box;
 }
 
-
-.search-field input::placeholder {
-
-    color: #A69B91;
-
-}
-
-
-/* BOTÃO DE PESQUISA */
-
-.search-form button {
-
+/*========== SECTION HEADER ==========*/
+.section-header {
     display: flex;
-
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-
-    gap: 10px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background-color: var(--color-primary);
-
-    color: var(--color-white);
-
-    padding: 16px 24px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: background-color 0.2s ease;
+    margin-bottom: 28px;
+}
+.section-header h2 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+.section-header p {
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+.section-header a {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-
-.search-form button:hover {
-
-    background-color: var(--color-primary-hover);
-
-}
-
-
-.search-form button svg {
-
-    width: 18px;
-
-    height: 18px;
-
-}
-
-
-/* =========================================
-   6. RESPONSIVIDADE
-========================================= */
-
-
-/* TABLETS */
-
-@media (max-width: 850px) {
-
-
-    /* HEADER */
-
-    .header-container {
-
-        gap: 15px;
-
-    }
-
-
-    .main-nav ul {
-
-        gap: 15px;
-
-    }
-
-
-    /* HERO */
-
-    .hero {
-
-        padding: 70px 0;
-
-    }
-
-
-    /* PESQUISA */
-
-    .search-form {
-
-        grid-template-columns: 1fr 1fr;
-
-    }
-
-
-    .search-form button {
-
-        grid-column: 1 / -1;
-
-    }
-
-}
-
-
-/* CELULARES */
-
-@media (max-width: 600px) {
-
-
-    /* HEADER */
-
-    .header-container {
-
-        min-height: 70px;
-
-        flex-wrap: wrap;
-
-        padding: 15px 0;
-
-    }
-
-
-    .logo {
-
-        font-size: 1.6rem;
-
-    }
-
-
-    .main-nav {
-
-        order: 3;
-
-        width: 100%;
-
-    }
-
-
-    .main-nav ul {
-
-        justify-content: space-between;
-
-        gap: 10px;
-
-    }
-
-
-    .main-nav a {
-
-        font-size: 0.8rem;
-
-    }
-
-
-    .header-actions {
-
-        gap: 12px;
-
-    }
-
-
-    .register-button {
-
-        padding: 9px 12px;
-
-        font-size: 0.85rem;
-
-    }
-
-
-    /* HERO */
-
-    .hero {
-
-        padding: 55px 0;
-
-    }
-
-
-    .hero h1 {
-
-        font-size: clamp(2.3rem, 9vw, 3rem);
-
-        letter-spacing: -1.5px;
-
-    }
-
-
-    .hero p {
-
-        font-size: 1rem;
-
-    }
-
-
-    /* PESQUISA */
-
-    .search-form {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .search-form button {
-
-        grid-column: auto;
-
-    }
-
-}
-
-
-/* ==========================
-   EVENT CARD
-========================== */
-
+/*========== EVENT CARDS ==========*/
 .event-card {
     background-color: #FFFFFF;
     border: 1px solid var(--border-color);
@@ -558,49 +299,33 @@ button,input {font: inherit;}
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .event-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(231, 181, 209, 0.5);
 }
 
-
-/* ==========================
-   EVENT IMAGE
-========================== */
-
+/* ========== EVENT IMAGE ==========*/
 .event-image {
     width: 100%;
     aspect-ratio: 16 / 10;
     overflow: hidden;
 }
-
 .event-image img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/* ========== EVENT INFORMATION ==========*/
+.event-info {padding: 12px;}
 
-
-/* ==========================
-   EVENT INFORMATION
-========================== */
-
-.event-info {
-    padding: 12px;
-}
-
-
-/* CATEGORY */
-
+/*========== EVENT CATEGORY ==========*/
 .event-category {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8px;
 }
-
 .event-category span {
     font-size: 12px;
     font-weight: 700;
@@ -609,9 +334,7 @@ button,input {font: inherit;}
     color: var(--primary-color);
 }
 
-
-/* FAVORITE BUTTON */
-
+/*========== FAVORITE BUTTON ==========*/
 .favorite-button {
     display: flex;
     align-items: center;
@@ -622,9 +345,7 @@ button,input {font: inherit;}
     color: var(--secondary-text);
 }
 
-
-/* EVENT TITLE */
-
+/*========== EVENT TITLE ==========*/
 .event-info h3 {
     font-family: var(--heading-font);
     font-size: 15px;
@@ -632,15 +353,13 @@ button,input {font: inherit;}
     margin-bottom: 10px;
 }
 
-
-/* EVENT DETAILS */
-
+/*========== EVENT DETAILS ==========*/
 .event-details {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 0px 0px 5px 0px;
 }
-
 .event-details p {
     display: flex;
     align-items: center;
@@ -648,112 +367,62 @@ button,input {font: inherit;}
     font-size: 12px;
     color: var(--secondary-text);
 }
-
 .event-details i {
     width: 16px;
     height: 16px;
 }
 
-
-/* EVENT FOOTER */
-
-.event-footer {
+/*========== EVENT FOOTER ==========*/
+.event-footer { /*PRICE*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 8px;
+    border-top: 1px solid var(--color-border);
+    padding: 5px 0px 0px 0px;
 }
-
-.event-badge {
+.event-price {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.event-price span {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+.event-price strong {
+    font-size: 15px;
+    color: var(--text-color);
+}
+.event-badge { /*MEIA ENTRADA BADGE*/
     display: inline-flex;
     align-items: center;
-    padding: 5px 8px;
+    padding: 5px 8px; 
     border-radius: 5px;
-    background-color: #90b8dd;
-    color: #2359aa;
+    background-color: var(--color-blue);
+    color: var(--color-blue-hover);
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
-
-/* EVENT PRICE */
-
-.event-price {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.event-price span {
-    font-size: 12px;
-    color: var(--secondary-text);
-}
-
-.event-price strong {
-    font-size: 15px;
-    color: var(--text-color);
-}
-
-/* ==========================
-   POPULAR EVENTS
-========================== */
-
-.popular-events {
-    width: 100%;
-    padding: 60px 16px 80px;
-    box-sizing: border-box;
-
-}
-
-/* EVENTS GRID */
-
+/*========== EVENTS GRID ==========*/
 .events-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 24px;
 }
-
 /*Fazer o mouse mudar quando ficar emcima */
 .event-card:hover {
     cursor: pointer;
 }
 
-/* SECTION HEADER */
+/* =========================================
+   10. RESPONSIVIDADE
+========================================= */
 
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 28px;
-}
-
-.section-header h2 {
-    font-family: var(--heading-font);
-    font-size: 28px;
-    color: var(--text-color);
-    margin-bottom: 6px;
-}
-
-.section-header p {
-    font-size: 14px;
-    color: var(--secondary-text);
-}
-
-.section-header a {
-    color: var(--primary-color);
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-
-
-/* ==========================
-    RESPONSIVE GRID 
-==========================*/
-
+/*========== DEFAULT [PC] ==========*/
 @media (max-width: 1024px) {
     .events-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -761,20 +430,67 @@ button,input {font: inherit;}
     }
 }
 
-@media (max-width: 768px) {
+/*========== TABLETS ==========*/
+@media (max-width: 850px) {
+    /* HEADER */
+    .header-container {gap: 15px;}
+    .main-nav ul {gap: 15px;}
+
+    /* HERO */
+    .hero {padding: 70px 0;}
+
+    /* PESQUISA */
+    .search-form {grid-template-columns: 1fr 1fr;}
+    .search-form button {grid-column: 1 / -1;}
+
+    /* GRID DE EVENTOS */
     .events-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
 }
 
-@media (max-width: 480px) {
+/*========== CELULARES ==========*/
+@media (max-width: 600px) {
+    /* HEADER */
+    .header-container {
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+    .logo {font-size: 1.6rem;}
+    .main-nav {
+        order: 3;
+        width: 100%;
+    }
+    .main-nav ul {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .main-nav a {font-size: 0.8rem;}
+    .header-actions {gap: 12px;}
+    .register-button {
+        padding: 9px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* HERO */
+    .hero {padding: 55px 0;}
+    .hero h1 {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        letter-spacing: -1.5px;
+    }
+    .hero p {font-size: 1rem;}
+
+    /* PESQUISA */
+    .search-form {grid-template-columns: 1fr;}
+    .search-form button {grid-column: auto;}
+
+    /* POPULAR EVENTS GRID */
     .events-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
-
-    .section-header h2 {
-        font-size: 23px;
-    }
+    .section-header h2 {font-size: 23px;}
 }
+
