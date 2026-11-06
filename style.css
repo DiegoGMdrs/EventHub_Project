@@ -8,8 +8,8 @@
     --color-text: #382f29;
     --color-secondary: #655A50;
 
-    --color-primary: #D65B3D;
-    --color-primary-hover: #BD4D33;
+    --color-primary: #3d8cd6;
+    --color-primary-hover: #4a71da;
     --color-alternative:#768b43;
     --color-alternative-hover:#477e3c;
     --color-blue:#90b8dd;
@@ -430,7 +430,11 @@ button,input {font: inherit;}
     background: none;
     border: none;
     cursor: pointer;
-    color: var(--secondary-text);
+    color: #f16ba1;
+}
+.favorite-button svg {
+    fill: white;
+    stroke: currentColor;
 }
 
 /*========== EVENT TITLE ==========*/
@@ -602,4 +606,3 @@ button,input {font: inherit;}
     }
     .section-header h2 {font-size: 23px;}
 }
-
