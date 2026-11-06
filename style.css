@@ -306,7 +306,7 @@ button,input {font: inherit;}
     transition: background-color 0.2s ease;
 }
 .categories-arrow:hover {background-color: var(--color-white);}
-.categories-arrow:active {background-color: var(--color-primary);}
+.categories-arrow:active {background-color: var(--color-blue-hover);}
 
 .categories-arrow i {
     width: 18px;
