@@ -12,8 +12,6 @@
     --color-primary-hover: #4a71da;
     --color-alternative:#768b43;
     --color-alternative-hover:#477e3c;
-    --color-blue:#90b8dd;
-    --color-blue-hover:#2359aa;
 
     --color-border: #DED5C9;
     --color-white: #FFFFFF;
@@ -29,7 +27,7 @@
 }
 
 /* =========================================
-   2. RESET
+   2. RESET (PADRONIZADOR DE NAVEGADORES)
 ========================================= */
 * { /*TODOS OS ELEMENTOS*/
     margin: 0;
@@ -87,7 +85,6 @@ button,input {font: inherit;}
     transition: color 0.2s ease;
 }
 .main-nav a:hover {color: var(--color-primary-hover);} /*Faz mudar de cor o texto quando o mouse passa*/
-.main-nav a:active {color: var(--color-alternative-hover);}
 
 /*========== AÇÕES DO HEADER (LOGIN AND REGISTER) ==========*/
 .header-actions {
@@ -100,7 +97,7 @@ button,input {font: inherit;}
     transition: color 0.2s ease;
 }
 .login-link:hover {color: var(--color-primary-hover);}
-.login-link:active {color: var(--color-alternative-hover);}
+
 
 .register-button {
     background-color: var(--color-primary);
@@ -111,7 +108,6 @@ button,input {font: inherit;}
     transition: background-color 0.2s ease;
 }
 .register-button:hover {background-color: var(--color-primary-hover);}
-.register-button:active {background-color: var(--color-alternative-hover);}
 
 /* =========================================
    4. HERO
@@ -219,7 +215,6 @@ button,input {font: inherit;}
     transition: background-color 0.2s ease;
 }
 .search-form button:hover {background-color: var(--color-primary-hover);}
-.search-form button:active {background-color: var(--color-alternative-hover);}
 .search-form button svg {
     width: 18px;
     height: 18px;
@@ -306,7 +301,7 @@ button,input {font: inherit;}
     transition: background-color 0.2s ease;
 }
 .categories-arrow:hover {background-color: var(--color-white);}
-.categories-arrow:active {background-color: var(--color-blue-hover);}
+.categories-arrow:active {background-color: var(--color-primary-hover);}
 
 .categories-arrow i {
     width: 18px;
@@ -491,8 +486,8 @@ button,input {font: inherit;}
     align-items: center;
     padding: 5px 8px; 
     border-radius: 5px;
-    background-color: var(--color-blue);
-    color: var(--color-blue-hover);
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
