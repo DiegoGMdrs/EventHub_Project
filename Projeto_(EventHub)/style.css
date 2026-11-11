@@ -10,8 +10,8 @@
 
     --color-primary: #3d8cd6;
     --color-primary-hover: #4a71da;
-    --color-alternative:#768b43;
-    --color-alternative-hover:#477e3c;
+    --color-alternative:#bbc9e2;
+    --color-alternative-hover:#1a89aa;
 
     --color-border: #DED5C9;
     --color-white: #FFFFFF;
@@ -442,7 +442,6 @@ button,input {font: inherit;}
 
 /*========== EVENT DETAILS ==========*/
 .event-details {
-    display: flex;
     flex-direction: column;
     gap: 6px;
     padding: 0px 0px 5px 0px;
@@ -503,6 +502,38 @@ button,input {font: inherit;}
 /*Fazer o mouse mudar quando ficar emcima */
 .event-card:hover {
     cursor: pointer;
+}
+
+/* =========================================
+    8. REGISTRO DE EVENTOS
+========================================= */
+.event-registration{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 340px;
+    background-color: var(--color-alternative) ;
+    padding: 10%;
+    margin:0% 10%;
+    border-radius: 12px;
+    
+    }
+
+.event-registration-header {
+    background-color: var(--color-alternative-hover);
+    color:var(--color-white);
+    align-items: center;
+    justify-items: center;
+    width:21rem;
+    border-radius: 12px;
+
+}
+.event-registration-content{
+    color:var(--color-primary-hover)
+}
+.event-registration-footer{
+    color:var(--color-text)
 }
 
 /* =========================================
