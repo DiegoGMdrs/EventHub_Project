@@ -515,7 +515,7 @@ button,input {font: inherit;}
     gap: 20px;
     min-height: 340px;
     background-color: var(--color-alternative) ;
-    padding: 55px 40px 45px;
+    padding: 55px 40px 80px;
     margin:0px 10%;
     border-radius: 12px;
     position:relative; /* Criar uma referencia para posicionar o header e o botão*/
@@ -543,7 +543,7 @@ button,input {font: inherit;}
     gap: 30px;
     color:var(--color-primary-hover)
 }
-    .event-registration-text {flex: 2; font-size: 1.5rem;}
+    .event-registration-text {flex: 2; font-size: 2rem;}
     .event-registration-img {
         flex: 2;
         display: flex;
@@ -594,6 +594,7 @@ button,input {font: inherit;}
     .category-card {
         flex-basis: calc((100% - 20px) / 5);
     }
+    .event-registration-text {flex: 2; font-size: 1.5rem;}
 }
 
 /*========== TABLETS ==========*/
@@ -685,12 +686,15 @@ button,input {font: inherit;}
     }
     .event-registration-header {
         max-width: 90%;
+        font-size: 0.7rem;
         white-space: normal;
         text-align: center;
     }
+    .event-registration-text {flex: 2; font-size: 1rem;}
+    .event-registration-footer {flex: 2; font-size: 0.7rem;}
     .event-registration-button {
         bottom: 15px;
         right: 15px;
     }
 }
-}
+
