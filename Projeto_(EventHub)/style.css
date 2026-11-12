@@ -576,6 +576,33 @@ button,input {font: inherit;}
 
 .event-registration-button:hover {background-color: var(--color-primary-hover);}
 
+/* =========================================
+   9. BOTÃO VOLTAR AO TOPO
+========================================= */
+.back-to-top {
+    position: fixed; /*Deixar o botão fixo na tela*/
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(97, 118, 187, 0.2);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+.back-to-top i {
+    width: 22px;
+    height: 22px;
+}
+.back-to-top:hover {
+    background-color: rgba(65, 95, 177, 0.5);
+    transform: translateY(-5px);
+}
 
 /* =========================================
    10. RESPONSIVIDADE
