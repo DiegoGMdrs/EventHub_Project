@@ -505,36 +505,77 @@ button,input {font: inherit;}
 }
 
 /* =========================================
-    8. REGISTRO DE EVENTOS
+    8. REGISTRO PRA PRODUTORES
 ========================================= */
 .event-registration{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 340px;
+    gap: 20px;
+    min-height: 340px;
     background-color: var(--color-alternative) ;
-    padding: 10%;
-    margin:0% 10%;
+    padding: 55px 40px 45px;
+    margin:0px 10%;
     border-radius: 12px;
-    
+    position:relative; /* Criar uma referencia para posicionar o header e o botão*/
     }
 
 .event-registration-header {
+    position:absolute; /*Colocar o header no meio da linha superior da borda da section*/
+        top:0;
+        left:50%;
+        transform: translate(-50%, -50%);
     background-color: var(--color-alternative-hover);
     color:var(--color-white);
     align-items: center;
     justify-items: center;
-    width:21rem;
+    padding: 8px 25px;
+    white-space: nowrap;
     border-radius: 12px;
-
 }
+.event-registration-header h2 {margin: 0;}
+
 .event-registration-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
     color:var(--color-primary-hover)
 }
+    .event-registration-text {flex: 2; font-size: 1.5rem;}
+    .event-registration-img {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+    }
+        .event-registration-img img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 54px;
+            border: 3px solid var(--color-alternative-hover);
+        }
 .event-registration-footer{
-    color:var(--color-text)
+    color:var(--color-text);
+    font-size:1rem;
 }
+.event-registration-footer p {margin-bottom: 0;}
+
+.event-registration-button {
+    position:absolute;
+    bottom: 20px;
+    right:25px;
+    background-color: var(--color-alternative-hover);
+    color: var(--color-white);
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.event-registration-button:hover {background-color: var(--color-primary-hover);}
+
 
 /* =========================================
    10. RESPONSIVIDADE
@@ -631,4 +672,25 @@ button,input {font: inherit;}
         gap: 16px;
     }
     .section-header h2 {font-size: 23px;}
+
+    .event-registration {
+        padding: 50px 20px 65px;
+        margin: 30px 5%;
+    }
+
+    /* PRODUCTORS REGISTER EVENTS */
+    .event-registration-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .event-registration-header {
+        max-width: 90%;
+        white-space: normal;
+        text-align: center;
+    }
+    .event-registration-button {
+        bottom: 15px;
+        right: 15px;
+    }
+}
 }
