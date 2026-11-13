@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="event-details.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -81,13 +82,27 @@
                 <p>Escolha sua inscrição para este evento.</p>
 
                 <div class="ticket-option">
-                    <label for="ticket-general">
-                        <input type="radio" name="ticket" id="ticket-general" checked>
+                    <label for="ticket-single">
+                        <input type="radio" name="ticket" id="ticket-single" checked>
                         <span><strong>Inscrição individual</strong>Lote atual</span>
                     </label>
                     <span class="ticket-price">R$ 279,90</span>
                 </div>
 
+                <div class="ticket-option">
+                    <label for="ticket-multiple">
+                        <input type="radio" name="ticket" id="ticket-multiple">
+                        <span><strong>Múltiplas inscrições</strong>Lote atual</span>
+                    </label>
+
+                    <select name="opcao" id="ticket-quantity" aria-label="Quantidade de ingressos">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span class="ticket-price" id="multiple-ticket-total" data-unit-price="27990">R$ 559,80</span>
+                </div>
                 <a class="ticket-button" href="#ingressos">Continuar para compra</a>
                 <small class="ticket-note">Valores e disponibilidade podem ser atualizados pela organização do evento.</small>
             </aside>
