@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="event-details.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event-details.css">
 </head>
 
 <body>
@@ -95,13 +96,15 @@
                         <span><strong>Múltiplas inscrições</strong>Lote atual</span>
                     </label>
 
-                    <select name="opcao" id="ticket-quantity" aria-label="Quantidade de ingressos">
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <span class="ticket-price" id="multiple-ticket-total" data-unit-price="27990">R$ 559,80</span>
+                    <div class="ticket-option-actions">
+                        <select name="opcao" id="ticket-quantity" aria-label="Quantidade de ingressos">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <span class="ticket-price" id="multiple-ticket-total" data-unit-price="27990">R$ 559,80</span>
+                    </div>
                 </div>
                 <a class="ticket-button" href="#ingressos">Continuar para compra</a>
                 <small class="ticket-note">Valores e disponibilidade podem ser atualizados pela organização do evento.</small>
@@ -109,7 +112,9 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer>
+    <p class="copyright">&copy; 2026 EventHub. Todos os direitos reservados.</p>
+    </footer>
 
     <script>
         window.addEventListener('DOMContentLoaded', () => lucide.createIcons());
