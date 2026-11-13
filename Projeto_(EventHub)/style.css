@@ -10,8 +10,8 @@
 
     --color-primary: #3d8cd6;
     --color-primary-hover: #4a71da;
-    --color-alternative:#bbc9e2;
-    --color-alternative-hover:#1a89aa;
+    --color-alternative:#e2bbd9;
+    --color-alternative-hover:#6a2f92;
 
     --color-border: #DED5C9;
     --color-white: #FFFFFF;
@@ -94,7 +94,7 @@ button,input {font: inherit;}
 }
 .login-link {
     font-weight: 600;
-    transition: color 0.2s ease;
+    transition: all ease 0.5s;
 }
 .login-link:hover {color: var(--color-primary-hover);}
 
@@ -105,7 +105,7 @@ button,input {font: inherit;}
     padding: 12px 20px;
     border-radius: 8px;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+    transition: all ease 0.5s;
 }
 .register-button:hover {background-color: var(--color-primary-hover);}
 
@@ -212,7 +212,7 @@ button,input {font: inherit;}
     padding: 16px 24px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: all ease 0.5s ;
 }
 .search-form button:hover {background-color: var(--color-primary-hover);}
 .search-form button svg {
@@ -461,12 +461,18 @@ button,input {font: inherit;}
 /*========== EVENT FOOTER ==========*/
 .event-footer { /*PRICE*/
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     border-top: 1px solid var(--color-border);
     padding: 5px 0px 0px 0px;
 }
+.event-details-link {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.event-details-link:hover {color: var(--color-primary-hover);}
 .event-price {
     display: flex;
     flex-direction: column;
@@ -505,7 +511,172 @@ button,input {font: inherit;}
 }
 
 /* =========================================
-    8. REGISTRO PRA PRODUTORES
+   8. DETALHES DO EVENTO
+========================================= */
+.event-page {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+    padding: 32px 0 80px;
+}
+.event-breadcrumb {
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+.event-breadcrumb a {color: var(--color-primary);}
+.event-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #253242;
+    color: var(--color-white);
+}
+.event-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.event-banner::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(20, 27, 38, 0.82), rgba(20, 27, 38, 0.12));
+    content: "";
+}
+.event-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 42px;
+}
+.event-banner-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #d6e8fa;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.event-banner h1 {
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+.event-banner-content > p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 9px;
+}
+.event-banner-content svg {width: 18px; height: 18px;}
+.event-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+    gap: 28px;
+    margin-top: 28px;
+}
+.event-detail-content,
+.ticket-card {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-white);
+}
+.event-detail-content h2,
+.ticket-card h2 {
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+}
+.event-detail-content p {
+    color: var(--color-secondary);
+    line-height: 1.75;
+}
+.event-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 26px;
+}
+.event-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--color-secondary);
+}
+.event-fact svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+}
+.event-fact strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-text);
+}
+.ticket-card {
+    position: sticky;
+    top: 24px;
+}
+.ticket-card > p {
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+.ticket-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-border);
+}
+.ticket-option label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+.ticket-option input {margin-top: 4px; accent-color: var(--color-primary);}
+.ticket-option strong {display: block; color: var(--color-text);}
+.ticket-option span {color: var(--color-secondary); font-size: 0.85rem;}
+.ticket-price {
+    color: var(--color-text) !important;
+    font-size: 1rem !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ticket-button {
+    display: block;
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+.ticket-button:hover {background: var(--color-primary-hover);}
+.ticket-note {
+    display: block;
+    margin-top: 12px;
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* =========================================
+    9. REGISTRO PRA PRODUTORES
 ========================================= */
 .event-registration{
     display:flex;
@@ -514,7 +685,7 @@ button,input {font: inherit;}
     justify-content: center;
     gap: 20px;
     min-height: 340px;
-    background-color: var(--color-alternative) ;
+    background-color: rgba(231, 181, 209, 0.5) ;
     padding: 55px 40px 80px;
     margin:0px 10%;
     border-radius: 12px;
@@ -526,7 +697,7 @@ button,input {font: inherit;}
         top:0;
         left:50%;
         transform: translate(-50%, -50%);
-    background-color: var(--color-alternative-hover);
+    background-color: rgb(66, 50, 59);
     color:var(--color-white);
     align-items: center;
     justify-items: center;
@@ -541,9 +712,9 @@ button,input {font: inherit;}
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    color:var(--color-primary-hover)
+    color:rgb(163, 89, 159);;
 }
-    .event-registration-text {flex: 2; font-size: 2rem;}
+    .event-registration-text {flex: 2; font-size:  1.5rem;}
     .event-registration-img {
         flex: 2;
         display: flex;
@@ -555,10 +726,10 @@ button,input {font: inherit;}
             height: auto;
             object-fit: contain;
             border-radius: 54px;
-            border: 3px solid var(--color-alternative-hover);
+            border: 3px solid rgb(132, 164, 206);
         }
 .event-registration-footer{
-    color:var(--color-text);
+    color:rgb(66, 50, 59);
     font-size:1rem;
 }
 .event-registration-footer p {margin-bottom: 0;}
@@ -567,17 +738,18 @@ button,input {font: inherit;}
     position:absolute;
     bottom: 20px;
     right:25px;
-    background-color: var(--color-alternative-hover);
+    background-color: rgb(66, 50, 59);;
     color: var(--color-white);
     padding: 10px 25px;
     border-radius: 12px;
     font-weight: bold;
+    transition: all ease 0.5s;
 }
 
-.event-registration-button:hover {background-color: var(--color-primary-hover);}
+.event-registration-button:hover {background-color:  rgb(41, 20, 20);}
 
 /* =========================================
-   9. BOTÃO VOLTAR AO TOPO
+   10. BOTÃO VOLTAR AO TOPO
 ========================================= */
 .back-to-top {
     position: fixed; /*Deixar o botão fixo na tela*/
@@ -605,7 +777,7 @@ button,input {font: inherit;}
 }
 
 /* =========================================
-   10. RESPONSIVIDADE
+   11. RESPONSIVIDADE
 ========================================= */
 
 /*========== TELA MEDIA PC ==========*/
@@ -622,6 +794,7 @@ button,input {font: inherit;}
         flex-basis: calc((100% - 20px) / 5);
     }
     .event-registration-text {flex: 2; font-size: 1.5rem;}
+    .event-detail-layout {grid-template-columns: minmax(0, 1fr) 320px;}
 }
 
 /*========== TABLETS ==========*/
@@ -650,6 +823,8 @@ button,input {font: inherit;}
     .category-card {
         flex-basis: calc((100% - 20px) / 3);
     }
+    .event-detail-layout {grid-template-columns: 1fr;}
+    .ticket-card {position: static;}
 }
 
 /*========== CELULARES ==========*/
@@ -723,5 +898,11 @@ button,input {font: inherit;}
         bottom: 15px;
         right: 15px;
     }
+    .event-page {padding-top: 22px;}
+    .event-banner {min-height: 320px;}
+    .event-banner-content {padding: 26px 22px;}
+    .event-detail-content,
+    .ticket-card {padding: 22px;}
+    .event-facts {grid-template-columns: 1fr;}
 }
 
