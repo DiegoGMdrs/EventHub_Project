@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Crie sua conta no EventHub e descubra novas experiências.">
+
+        <title>EventHub | Login</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+        <main class="registration-page">
+            <a href="index.html" class="logo" aria-label="EventHub, página inicial">
+                Event<span>Hub</span>.
+            </a>
+
+            <section class="registration-card" aria-labelledby="registration-title">
+                <span class="registration-label">BEM-VINDO AO EVENTHUB</span>
+                <h1 id="registration-title">Faça o Login</h1>
+                <p class="registration-description">
+                    Faça o seu Login e encontre eventos para viver novas experiências.
+                </p>
+
+                <form class="registration-form">
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@email.com"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Senha</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Pelo menos 8 caracteres"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+
+                    <button type="button" class="registration-submit">Login</button>
+                </form>
+            </section>
+
+            <a href="index.html" class="back-link">Voltar para a página inicial</a>
+        </main>
+        <script>
+            //Script básico para ter certeza que o user será direcionado para página home.
+            const registrationForm = document.querySelector(".registration-form");
+            const continueToMainPage = () => {
+                if (!registrationForm.reportValidity()) {
+                    return;
+                }
+
+                window.location.href = new URL("../home.html", window.location.href).href;
+            };
+
+            document.querySelector(".registration-submit").addEventListener("click", continueToMainPage);
+            registrationForm.addEventListener("submit", (event) => {
+                event.preventDefault();
+                continueToMainPage();
+            });
+        </script>
+    </body>
+</html>
