@@ -42,12 +42,16 @@
                 <!-- NAVEGAÇÃO -->
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#">Categorias</a></li>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Para organizadores</a></li>
+                        <li><a href="#event-categories">Categorias</a></li>
+                        <li><a href="#popular-events">Popular</a></li>
+                        <li><a href="#event-registration">Para organizadores</a></li>
                     </ul>
-
                 </nav>
+
+                <!-- BOTÃO VOLTAR AO TOPO -->
+                <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+                    <i data-lucide="arrow-up"></i>
+                </a>
 
                 <!-- FAZER LOGIN E REGISTRO -->
                 <div class="header-actions">
@@ -99,7 +103,7 @@
 
             </section> <!--Fim da section HERO-->
 
-            <section class="event-categories">
+            <section class="event-categories" id="event-categories">
                 <div class="container">
 
                     <div class="section-header">
@@ -238,9 +242,10 @@
 
                     </div>
                 </div>
+            </section>
 
                 <!-- ========== PAGINA EVENTOS POPULARES ==========-->
-                <section class="popular-events">
+                <section class="popular-events" id="popular-events">
                     <div class="container">
                         <div class="section-header">
                             <div>
@@ -254,7 +259,7 @@
                             <!-- EVENTO 1 -->
                             <article class="event-card">
                                 <div class="event-image">
-                                    <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Festival de música">
+                                    <a href="event-details.html"><img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Festival de música"></a>
                                 </div>
 
                                 <div class="event-info">
@@ -265,7 +270,7 @@
                                         </button>
                                     </div>
 
-                                    <h3>Ultramaratona BM 2027</h3>
+                                    <h3><a href="event-details.html">Ultramaratona BM 2027</a></h3>
 
                                     <div class="event-details">
                                         <p><i data-lucide="calendar-days"></i> 16 out, 2027 · Sáb · 05:30</p>
@@ -277,6 +282,7 @@
                                             <span>Starting at</span>
                                             <strong>R$ 279,90</strong>
                                         </div>
+                                        <a class="event-details-link" href="event-details.html">Ver evento</a>
                                     </div>
                                 </div>
                             </article>
@@ -307,6 +313,7 @@
                                             <span>Starting at</span>
                                             <strong>R$ 1300,00</strong>
                                         </div>
+                                        <a class="event-details-link" href="#">Ver evento</a>
                                     </div>
                                 </div>
                             </article>
@@ -337,6 +344,7 @@
                                             <span>Starting at</span>
                                             <strong>R$ 350,00</strong>
                                         </div>
+                                        <a class="event-details-link" href="#">Ver evento</a>
                                     </div>
                                 </div>
                             </article>
@@ -370,6 +378,7 @@
                                         <span class="event-badge">
                                             Meia-entrada
                                         </span>
+                                        <a class="event-details-link" href="#">Ver evento</a>
                                     </div>
                                 </div>
                             </article>
@@ -378,13 +387,23 @@
                     </div>
                 </section> <!-- FIM DA SECTION POPULAR EVENTS -->
 
-                <section> <!--DIEGO VAI FAZER UMA SEÇÃO SOBRE CADASTRO DE EVENTOS-->
+                <section class="event-registration" id="event-registration"> <!-- CADASTRO DE EVENTOS -->
+            <div class="event-registration-header">
+                <h2>EventHub. para Produtores</h2>
+            </div>
+            <div class="event-registration-content">
+                <div class="event-registration-text">
+                    <h2>Crie eventos, divulgue e venda ingressos com facilidade</h2>
+                </div>
+                <div class="event-registration-img">
+                    <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/46884938-ilustracao-do-uma-homem-trabalhando-em-uma-computador-portatil-com-dados-analytics-graficos-e-nuvem-informatica-elementos-em-torno-da-ele-sugerindo-uma-foco-em-tecnologia-e-crescimento-vetor.jpg" alt="Produtor de eventos">
+                </div>
+            </div>
 
                 </section>
+        </main>
 
-            </main>
-
-            <footer> <!--ARTHUR VAI FAZER O FOOTER, UMA PAGINA SEPARADA DE FORMULARIO PARA CADASTRO E O JAVASCRIPT-->
+            <footer> 
                 <p class="copyright">&copy; 2026 EventHub. Todos os direitos reservados.</p>
             </footer>
 

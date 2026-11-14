@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confira os detalhes e ingressos da Ultramaratona BM 2027 no EventHub.">
+
+    <title>Ultramaratona BM 2027 | EventHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="event-details.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event-details.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Event<span>Hub</span>.</a>
+
+            <nav class="main-nav" aria-label="Navegação do evento">
+                <ul>
+                    <li><a href="#sobre-evento">Sobre o evento</a></li>
+                    <li><a href="#ingressos">Ingressos</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html" class="login-link">Voltar aos eventos</a>
+                <a href="#ingressos" class="register-button">Comprar ingresso</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="event-page">
+        <nav class="event-breadcrumb" aria-label="Você está em">
+            <a href="index.html">Início</a> / Eventos / Ultramaratona BM 2027
+        </nav>
+
+        <section class="event-banner" aria-labelledby="event-title">
+            <img src="https://images.sympla.com.br/6ad147b5bc700-lg.png" alt="Imagem da Ultramaratona BM 2027">
+            <div class="event-banner-content">
+                <span class="event-banner-label">Esportes · Bertioga, SP</span>
+                <h1 id="event-title">Ultramaratona BM 2027</h1>
+                <p><i data-lucide="calendar-days"></i> 16 de outubro de 2027 · Sábado · 05:30</p>
+                <p><i data-lucide="map-pin"></i> Bertioga, São Paulo</p>
+            </div>
+        </section>
+
+        <div class="event-detail-layout">
+            <section class="event-detail-content" id="sobre-evento">
+                <h2>Sobre o evento</h2>
+                <p>
+                    Confira as informações da Ultramaratona BM 2027 e prepare-se para viver
+                    essa experiência esportiva em Bertioga. Consulte os detalhes do evento
+                    e escolha sua inscrição.
+                </p>
+
+                <div class="event-facts">
+                    <div class="event-fact">
+                        <i data-lucide="calendar-days"></i>
+                        <div>
+                            <strong>Data e horário</strong>
+                            16 de outubro de 2027, às 05:30
+                        </div>
+                    </div>
+                    <div class="event-fact">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <strong>Local</strong>
+                            Bertioga, SP
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="ticket-card" id="ingressos">
+                <h2>Ingressos</h2>
+                <p>Escolha sua inscrição para este evento.</p>
+
+                <div class="ticket-option">
+                    <label for="ticket-single">
+                        <input type="radio" name="ticket" id="ticket-single" checked>
+                        <span><strong>Inscrição individual</strong>Lote atual</span>
+                    </label>
+                    <span class="ticket-price">R$ 279,90</span>
+                </div>
+
+                <div class="ticket-option">
+                    <label for="ticket-multiple">
+                        <input type="radio" name="ticket" id="ticket-multiple">
+                        <span><strong>Múltiplas inscrições</strong>Lote atual</span>
+                    </label>
+
+                    <div class="ticket-option-actions">
+                        <select name="opcao" id="ticket-quantity" aria-label="Quantidade de ingressos">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <span class="ticket-price" id="multiple-ticket-total" data-unit-price="27990">R$ 559,80</span>
+                    </div>
+                </div>
+                <a class="ticket-button" href="#ingressos">Continuar para compra</a>
+                <small class="ticket-note">Valores e disponibilidade podem ser atualizados pela organização do evento.</small>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+    <p class="copyright">&copy; 2026 EventHub. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+    </script>
+</body>
+
+</html>
