@@ -49,6 +49,15 @@ prevButton.addEventListener("click", () => {
 
 favoriteButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const isActive = button.classList.toggle("active");
+    Toastify({
+      text: "Para favoritar um evento, é necessário fazer login ou criar uma conta.",
+      duration: 6000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      className: "eventhub-auth-toast",
+      ariaLive: "polite",
+    }).showToast();
   });
 });

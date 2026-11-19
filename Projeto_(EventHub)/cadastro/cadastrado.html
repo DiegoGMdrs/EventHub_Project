@@ -75,7 +75,7 @@
                 </p>
             </section>
 
-            <a href="index.html" class="back-link">Voltar para a página inicial</a>
+            <a href="../index.html" class="back-link">Voltar para a página inicial</a>
         </main>
         <script>
             //Script básico para ter certeza que o user será direcionado para página home.
@@ -85,7 +85,7 @@
                     return;
                 }
 
-                window.location.href = new URL("../home.html", window.location.href).href;
+                window.location.href = new URL("../home/home.html", window.location.href).href;
             };
 
             document.querySelector(".registration-submit").addEventListener("click", continueToMainPage);
