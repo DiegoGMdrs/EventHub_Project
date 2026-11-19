@@ -268,9 +268,9 @@ button,input {font: inherit;}
     min-height: 120px;
     padding: 16px;
     background-color: #FFFFFF;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
-    color: var(--text-color);
+    color: var(--color-text);
     text-decoration: none;
     text-align: center;
     scroll-snap-align: start;
@@ -283,7 +283,7 @@ button,input {font: inherit;}
 .category-card i {
     width: 26px;
     height: 26px;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 .category-card span {
     font-size: 13px;
@@ -299,9 +299,9 @@ button,input {font: inherit;}
     height: 36px;
     flex-shrink: 0;
     background-color: var(--color-border);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     border-radius: 50%;
-    color: var(--text-color);
+    color: var(--color-text);
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -363,18 +363,18 @@ button,input {font: inherit;}
     margin-bottom: 28px;
 }
 .section-header h2 {
-    font-family: var(--heading-font);
+    font-family: var(--font-heading);
     font-size: 28px;
-    color: var(--text-color);
+    color: var(--color-text);
     margin-bottom: 6px;
 }
 
 .section-header p {
     font-size: 14px;
-    color: var(--secondary-text);
+    color: var(--color-secondary);
 }
 .section-header a {
-    color: var(--primary-color);
+    color: var(--color-primary);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -383,7 +383,7 @@ button,input {font: inherit;}
 /*========== EVENT CARDS ==========*/
 .event-card {
     background-color: #FFFFFF;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -420,7 +420,7 @@ button,input {font: inherit;}
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 /*========== FAVORITE BUTTON ==========*/
@@ -450,9 +450,9 @@ button,input {font: inherit;}
 
 /*========== EVENT TITLE ==========*/
 .event-info h3 {
-    font-family: var(--heading-font);
+    font-family: var(--font-heading);
     font-size: 15px;
-    color: var(--text-color);
+    color: var(--color-text);
     margin-bottom: 10px;
 }
 
@@ -468,7 +468,7 @@ button,input {font: inherit;}
     align-items: center;
     gap: 8px;
     font-size: 12px;
-    color: var(--secondary-text);
+    color: var(--color-secondary);
 }
 .event-details i {
     width: 16px;
@@ -497,11 +497,11 @@ button,input {font: inherit;}
 }
 .event-price span {
     font-size: 12px;
-    color: var(--secondary-text);
+    color: var(--color-secondary);
 }
 .event-price strong {
     font-size: 15px;
-    color: var(--text-color);
+    color: var(--color-text);
 }
 .event-badge { /*MEIA ENTRADA BADGE*/
     display: inline-flex;
