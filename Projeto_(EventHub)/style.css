@@ -559,8 +559,12 @@ button,input {font: inherit;}
     padding: 55px 40px 80px;
     margin:0px 10%;
     border-radius: 12px;
+<<<<<<< HEAD
     position:relative; 
     /* Criar uma referencia para posicionar o header e o botão*/
+=======
+    position:relative; /* Criar uma referencia para posicionar o header e o botão*/
+>>>>>>> a3c3ad7f8cd4c389dc0ec2b45283b5b3e7fdaa9f
     }
 
 .event-registration-header {
@@ -576,9 +580,13 @@ button,input {font: inherit;}
     white-space: nowrap;
     border-radius: 12px;
 }
+<<<<<<< HEAD
 .event-registration-header h2 {
     margin: 0;
 }
+=======
+.event-registration-header h2 {margin: 0;}
+>>>>>>> a3c3ad7f8cd4c389dc0ec2b45283b5b3e7fdaa9f
 
 .event-registration-content{
     display:flex;

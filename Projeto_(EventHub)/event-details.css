@@ -1,0 +1,231 @@
+/* =========================================
+   EVENT DETAILS PAGE
+========================================= */
+.event-page {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+    padding: 32px 0 80px;
+}
+
+/*========== EVENT BREADCRUMB ==========*/
+.event-breadcrumb {
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+.event-breadcrumb a {color: var(--color-primary);}
+
+/* =========================================
+   EVENTS BANNER
+========================================= */
+.event-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 390px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #253242;
+    color: var(--color-white);
+}
+.event-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.event-banner::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(20, 26, 38, 0.9), rgba(20, 27, 38, 0.2));
+    content: "";
+}
+.event-banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 42px;
+}
+.event-banner-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #d6e8fa;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.event-banner h1 {
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+}
+.event-banner-content > p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 9px;
+}
+.event-banner-content svg {width: 18px; height: 18px;}
+
+/* =========================================
+   EVENTS DETAILS
+========================================= */
+.event-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: start;
+    gap: 28px;
+    margin-top: 28px;
+}
+.event-detail-content,.ticket-card {
+    padding: 28px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: var(--color-white);
+}
+.event-detail-content h2,.ticket-card h2 {
+    margin-bottom: 14px;
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+}
+.event-detail-content p {
+    color: var(--color-secondary);
+    line-height: 1.75;
+}
+
+/*========== EVENT FACTS ==========*/
+.event-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 26px;
+}
+.event-fact {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--color-secondary);
+}
+.event-fact svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+}
+.event-fact strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-text);
+}
+
+/* =========================================
+   TICKET CARD
+========================================= */
+.ticket-card {
+    position: sticky;
+    top: 24px;
+}
+.ticket-card > p {
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+.ticket-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid var(--color-border);
+}
+.ticket-option label {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    gap: 10px;
+    min-width: 0;
+    cursor: pointer;
+}
+.ticket-option input {margin-top: 4px; accent-color: var(--color-primary);}
+.ticket-option strong {display: block; color: var(--color-text);}
+.ticket-option span {color: var(--color-secondary); font-size: 0.85rem;}
+.ticket-option-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#ticket-quantity {
+    min-width: 60px;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    appearance: none;
+    background-color: var(--color-white);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23655A50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: var(--color-text);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#ticket-quantity:hover {border-color: var(--color-alternative);}
+#ticket-quantity:focus-visible {
+    border-color: var(--color-alternative);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-alternative);
+}
+.ticket-price {
+    color: var(--color-text) !important;
+    font-size: 1rem !important;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ticket-button {
+    display: block;
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+.ticket-button:hover {background: var(--color-primary-hover);}
+.ticket-note {
+    display: block;
+    margin-top: 12px;
+    color: var(--color-secondary);
+    font-size: 0.65rem;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIBILIDADE
+========================================= */
+
+/*========== TELA MEDIA PC ==========*/
+@media (max-width: 1024px) {
+    .event-detail-layout {grid-template-columns: minmax(0, 1fr) 320px;}
+}
+
+/*========== TABLETS ==========*/
+@media (max-width: 850px) {
+    .event-detail-layout {grid-template-columns: 1fr;}
+    .ticket-card {position: static;}
+}
+
+/*========== CELULARES ==========*/
+@media (max-width: 600px) {
+    .event-page {padding-top: 22px;}
+    .event-banner {min-height: 320px;}
+    .event-banner-content {padding: 26px 22px;}
+    .event-detail-content,
+    .ticket-card {padding: 22px;}
+    .event-facts {grid-template-columns: 1fr;}
+}
