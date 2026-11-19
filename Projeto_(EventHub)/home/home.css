@@ -1,0 +1,760 @@
+
+/* =========================================
+   1. VARIÁVEIS [VAR()]
+========================================= */
+:root { /*PADRONIZAR A PAGINA*/
+    /* CORES */
+    --color-background: #F4EFE8;
+    --color-text: #382f29;
+    --color-text-alternative:rgb(66, 50, 59);
+    --color-secondary: #655A50;
+
+    --color-primary: #3d8cd6;
+    --color-primary-hover: #4a71da;
+    --color-alternative:rgba(231, 181, 209, 0.5);
+    --color-alternative-hover:rgb(163, 89, 159);
+
+    --color-border: #DED5C9;
+    --color-white: #FFFFFF;
+
+
+    /* TIPOGRAFIA */
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+
+    /* DIMENSÕES */
+    --container-width: 1200px;
+}
+
+/* =========================================
+   2. RESET (PADRONIZADOR DE NAVEGADORES)
+========================================= */
+* { /*TODOS OS ELEMENTOS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button,input {font: inherit;}
+
+/* =========================================
+   3. HEADER
+========================================= */
+.main-header {
+    width: 100%;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+.header-container {
+    width: min(var(--container-width), 90%);
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/*========== LOGO ==========*/
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+.logo span {color: var(--color-primary);}
+
+/*========== NAVEGAÇÃO ==========*/
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.main-nav a:hover {color: var(--color-primary-hover);} /*Faz mudar de cor o texto quando o mouse passa*/
+
+/*========== AÇÕES DO HEADER (LOGIN AND REGISTER) ==========*/
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.login-link {
+    font-weight: 600;
+    transition: all ease 0.5s;
+}
+.login-link:hover {color: var(--color-primary-hover);}
+
+
+.register-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all ease 0.5s;
+}
+.register-button:hover {background-color: var(--color-primary-hover);}
+
+/* =========================================
+   4. HERO
+========================================= */
+.hero {
+    width: 100%;
+    padding: 90px 0 100px;
+}
+.hero-container {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+}
+.hero-content {max-width: 850px;}
+
+/*========== IDENTIFICAÇÃO DO HERO ==========*/
+.hero-label {
+    display: inline-block;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+/*========== TÍTULO ==========*/
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+.hero h1 span {
+    display: block;
+    color: var(--color-primary);
+    cursor: default;
+}
+/*========== DESCRIÇÃO ==========*/
+.hero p {
+    max-width: 580px;
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    cursor: default;
+}
+
+/* =========================================
+   5. FORMULÁRIO DE PESQUISA "BUSCAR EVENTOS"
+========================================= */
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+    background-color: var(--color-white);
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+/*========== CAMPOS ==========*/
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 10px;
+}
+/*========== LABEL ==========*/
+.search-field label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+/*========== ÍCONES ==========*/
+.search-field label svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-primary);
+}
+/*========== INPUT ==========*/
+.search-field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
+.search-field input::placeholder {color: #A69B91;}
+
+/*==========BOTÃO DE PESQUISA ==========*/
+.search-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 16px 24px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all ease 0.5s ;
+}
+.search-form button:hover {background-color: var(--color-primary-hover);}
+.search-form button svg {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* =========================================
+   6. SEÇÃO DE CATEGORIAS
+========================================= */
+.event-categories {
+    width: 100%;
+    padding: 10px 16px 60px;
+}
+
+/*========== CARROSSEL ==========*/
+.categories-carousel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.categories-viewport {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.categories-viewport::-webkit-scrollbar {display: none;}
+
+/*========== GRID DE CATEGORIAS ==========*/
+.categories-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 0 10px;
+}
+.category-card {
+    display: flex;
+    flex: 0 0 calc((100% - 75px) / 6);
+    flex-direction: column;
+    flex-basis: calc((100% - 10px) / 10);
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 120px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    color: var(--color-text);
+    text-decoration: none;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px var(--color-alternative);
+}
+.category-card i {
+    width: 26px;
+    height: 26px;
+    color: var(--color-primary);
+}
+.category-card span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*========== SETAS ==========*/
+.categories-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background-color: var(--color-border);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.categories-arrow:hover {background-color: var(--color-white);}
+.categories-arrow:active {background-color: var(--color-primary-hover);}
+
+.categories-arrow i {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================================
+   7. CARROSSEL DE EVENTOS
+========================================= */
+.hero-carousel {
+    width: 100%;
+    padding: 0 0 80px;
+}
+.carousel-container {
+    width: min(var(--container-width), 90%);
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.swiper-wrapper {display: flex;}
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+    7. POPULAR EVENT CARDS GRID
+========================================= */
+.popular-events {
+    width: 100%;
+    padding: 60px 16px 80px;
+    box-sizing: border-box;
+}
+
+/*========== SECTION HEADER ==========*/
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--color-text);
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    font-size: 14px;
+    color: var(--color-secondary);
+}
+.section-header a {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/*========== EVENT CARDS ==========*/
+.event-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px var(--color-alternative);
+}
+
+/* ========== EVENT IMAGE ==========*/
+.event-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+.event-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* ========== EVENT INFORMATION ==========*/
+.event-info {padding: 12px;}
+
+/*========== EVENT CATEGORY ==========*/
+.event-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.event-category span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-primary);
+}
+
+/*========== FAVORITE BUTTON ==========*/
+.favorite-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f16ba1;
+}
+.favorite-button svg {
+    fill: white;
+    stroke: currentColor;
+}
+
+.favorite-button svg:hover {
+    fill: #f16ba1;
+    stroke: currentColor;
+    transition: all 0.3s ease;
+}
+
+.favorite-button.active svg {
+    fill: #f16ba1;
+}
+
+/*========== EVENT TITLE ==========*/
+.event-info h3 {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+/*========== EVENT DETAILS ==========*/
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0px 0px 5px 0px;
+}
+.event-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--color-secondary);
+}
+.event-details i {
+    width: 16px;
+    height: 16px;
+}
+
+/*========== EVENT FOOTER ==========*/
+.event-footer { /*PRICE*/
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid var(--color-border);
+    padding: 5px 0px 0px 0px;
+}
+.event-details-link {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.event-details-link:hover {color: var(--color-primary-hover);}
+.event-price {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.event-price span {
+    font-size: 12px;
+    color: var(--color-secondary);
+}
+.event-price strong {
+    font-size: 15px;
+    color: var(--color-text);
+}
+.event-badge { /*MEIA ENTRADA BADGE*/
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 8px; 
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/*========== EVENTS GRID ==========*/
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+/*Fazer o mouse mudar quando ficar emcima */
+.event-card:hover {
+    cursor: pointer;
+}
+
+/* =========================================
+    8. REGISTRO PRA PRODUTORES
+========================================= */
+.event-registration{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 340px;
+    background-color: var(--color-alternative);
+    padding: 55px 40px 80px;
+    margin:0px 10%;
+    border-radius: 12px;
+    position:relative; /* Criar uma referencia para posicionar o header e o botão*/
+    }
+
+.event-registration-header {
+    position:absolute; /*Colocar o header no meio da linha superior da borda da section*/
+        top:0;
+        left:50%;
+        transform: translate(-50%, -50%);
+    background-color: var(--color-text-alternative);
+    color:var(--color-white);
+    align-items: center;
+    justify-items: center;
+    padding: 8px 25px;
+    white-space: nowrap;
+    border-radius: 12px;
+}
+.event-registration-header h2 {margin: 0;}
+
+.event-registration-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    color: var(--color-alternative-hover);
+}
+    .event-registration-text {flex: 2; font-size:  1.5rem;}
+    .event-registration-img {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+    }
+        .event-registration-img img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 54px;
+            border: 3px solid rgb(132, 164, 206);
+        }
+.event-registration-footer{
+    color: var(--color-text-alternative);
+    font-size:1rem;
+}
+.event-registration-footer p {margin-bottom: 0;}
+
+.event-registration-button {
+    position:absolute;
+    bottom: 20px;
+    right:25px;
+    background-color: var(--color-text-alternative);
+    color: var(--color-white);
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: all ease 0.5s;
+}
+
+.event-registration-button:hover {background-color:  rgb(41, 20, 20);}
+
+/* =========================================
+   9. BOTÃO VOLTAR AO TOPO
+========================================= */
+.back-to-top {
+    position: fixed; /*Deixar o botão fixo na tela*/
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(97, 118, 187, 0.2);
+    color: var(--color-white);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 999;
+}
+.back-to-top i {
+    width: 22px;
+    height: 22px;
+}
+.back-to-top:hover {
+    background-color: rgba(65, 95, 177, 0.5);
+    transform: translateY(-5px);
+}
+
+/* =========================================
+   10. RESPONSIVIDADE
+========================================= */
+
+/*========== TELA MEDIA PC ==========*/
+@media (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .categories-grid {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        padding:0px 30px;
+    }
+    .category-card {
+        flex-basis: calc((100% - 20px) / 5);
+    }
+    .event-registration-text {flex: 2; font-size: 1.5rem;}
+}
+
+/*========== TABLETS ==========*/
+@media (max-width: 850px) {
+    /* HEADER */
+    .header-container {gap: 15px;}
+    .main-nav ul {gap: 15px;}
+
+    /* HERO */
+    .hero {padding: 70px 0;}
+
+    /* PESQUISA */
+    .search-form {grid-template-columns: 1fr 1fr;}
+    .search-form button {grid-column: 1 / -1;}
+
+    /* GRID DE CATEGORIAS */
+    .categories-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    /* GRID DE EVENTOS */
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+    .category-card {
+        flex-basis: calc((100% - 20px) / 3);
+    }
+}
+
+/*========== CELULARES ==========*/
+@media (max-width: 600px) {
+    /* HEADER */
+    .header-container {
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+    .logo {font-size: 1.6rem;}
+    .main-nav {
+        order: 3;
+        width: 100%;
+    }
+    .main-nav ul {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .main-nav a {font-size: 0.8rem;}
+    .header-actions {gap: 12px;}
+    .register-button {
+        padding: 9px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* HERO */
+    .hero {padding: 55px 0;}
+    .hero h1 {
+        font-size: clamp(2.3rem, 9vw, 3rem);
+        letter-spacing: -1.5px;
+    }
+    .hero p {font-size: 1rem;}
+
+    /* PESQUISA */
+    .search-form {grid-template-columns: 1fr;}
+    .search-form button {grid-column: auto;}
+
+    /* GRID DE CATEGORIAS */
+    .categories-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding:0px 15px;
+    }
+
+    /* POPULAR EVENTS GRID */
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .section-header h2 {font-size: 23px;}
+
+    .event-registration {
+        padding: 50px 20px 65px;
+        margin: 30px 5%;
+    }
+
+    /* PRODUCTORS REGISTER EVENTS */
+    .event-registration-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .event-registration-header {
+        max-width: 90%;
+        font-size: 0.7rem;
+        white-space: normal;
+        text-align: center;
+    }
+    .event-registration-text {flex: 2; font-size: 1rem;}
+    .event-registration-footer {flex: 2; font-size: 0.7rem;}
+    .event-registration-button {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Footer */
+.copyright {
+    text-align: center;
+    font-size: 15px;
+    color: var(--color-secondary);
+    margin-bottom: 12px;
+    margin-top: 28px;
+    cursor: default;
+}
